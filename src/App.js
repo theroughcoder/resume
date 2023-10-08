@@ -78,17 +78,20 @@ function App() {
           <h1>Projects</h1>
           <ul class="project-list">
           {projects.map((ele)=>{
-            return <li className ={`project-cont ${(1500 < curScroll) && 'active-project'}`} >
-                <a href={ele.link}>
-              
-                <div>
-                <img src={ele.img}/>
+            return <div id = "project-frame">
 
-                </div>
-                <h1>{ele.name}</h1>
-                <p>{ele.des}</p>
-            </a>
+               <li className ={`project-cont ${(1700 < curScroll) && 'active-project'}`} >
+                  <a href={ele.link}>
+                
+                  <div>
+                  <img src={ele.img}/>
+
+                  </div>
+                  <h1>{ele.name}</h1>
+                  <p>{ele.des}</p>
+                  </a>
               </li>
+            </div>
            }) 
           } 
           </ul>
@@ -100,7 +103,7 @@ function App() {
         <h1>Courses</h1>
 
           <ul className='courses-list'>
-            <li className='courses-li'>
+            <li className='courses-li course-left'>
               <h1>Coding Ninjas</h1>
                 <p>I had the pleasure of completing the Full Stack Web Development courses offered by Coding Ninjas. An experience that has not only enriched my skill set but has also transformed the way I approach web development.</p>
                 <h3>certificates</h3>
@@ -110,7 +113,7 @@ function App() {
                   <li><a href='https://certificate.codingninjas.com/view/1c9496ce4ed925ca'>Career Camp | React</a></li>
                 </ul>
               </li>
-            <li className='courses-li'>
+            <li className='courses-li course-right'>
               <h1>Udemy</h1>
               
               <p>The Courses from Udemy helped me in making my web development fundamentals stronger. Throughout my learning experience, I had the opportunity to not only acquire valuable knowledge but to also translate it into tangible projects.</p>
