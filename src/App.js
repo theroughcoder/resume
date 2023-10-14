@@ -89,6 +89,7 @@ function App() {
                   </div>
                   <h1>{ele.name}</h1>
                   <p>{ele.des}</p>
+                  <p style={{color: "blue"}}>Click here to see</p>
                   </a>
               </li>
             </div>
