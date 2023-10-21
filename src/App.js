@@ -33,7 +33,7 @@ function App() {
         <div id="blur_box"><div id="myName">sanchit pandey</div></div>
         <div  className={`nav_bar ${colnav && 'active_navbar'}`}>
         {colnav && 
-          <button className='close_btn' onClick={()=> setColnav(false)}>Close</button>
+        <button className='close_btn' onClick={()=> setColnav(false)}>Close</button>
         }
         <a onClick={()=> setColnav(false)} href="">Home</a>
         <a onClick={()=> setColnav(false)} href="#about">About</a>

@@ -437,6 +437,9 @@ footer h1{
   text-align: center;
   height: 20%;
 }
+.close_btn{
+  display: none;
+}
 
 @media screen and (max-width: 600px) {
   #profile_pic{
@@ -501,6 +504,6 @@ footer h1{
     width: 100%;
     height: 60px;
     font-size: larger;
-    
+    display: block;
   }
 }
