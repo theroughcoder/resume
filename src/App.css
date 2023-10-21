@@ -2,9 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  overflow-x:hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +25,17 @@ html {
 
 .App-link {
   color: #61dafb;
+}
+
+#colnav{
+  /* position: absolute; */
+  /* left: 0; */
+  display: none;
+  position: absolute;
+  margin: 2ch;
+  width: 50px;
+  height: 50px;
+  background-image: url('../public/images/colnav.svg');
 }
 
 
@@ -51,6 +61,11 @@ header{
   /* background-image: linear-gradient(rgba(241, 240, 240, 0.452), rgba(0, 238, 255, 0.295)); */
   
 }
+.nav_bar{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
 #profile_pic{
   height: 300px;
   width: 300px;
@@ -64,7 +79,9 @@ header{
   background-size: cover;
 }
 #myName{
-  position: absolute;
+  /* position: absolute; */
+  line-height: 200px;
+  text-align: center;
   font-size: 6vw;
   letter-spacing: 15px;
   text-transform: capitalize;
@@ -72,14 +89,16 @@ header{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   bottom: 40%;
   z-index: 2;
+  /* margin: auto; */
 
 }
 #blur_box{
+  margin: auto;
   border: 2px solid white;
   height: 200px;
   max-width:  1100px;
-  width: 70vw;
-  position: absolute;
+  width: 80vw;
+  /* position: absolute; */
   top: 30%;
   background-color: rgba(0, 0, 0, 0.158);
   transition: transform .5s;
@@ -87,16 +106,10 @@ header{
   /* filter: blur(4px); */
   /* -webkit-filter: blur(5px); */
 }
-#blur_box:hover{
-  
-  transform: scale(1,1.1);
-  /* filter: blur(1px); */
-  /* background-color: rgba(247, 251, 253, 0.062); */
-  /* -webkit-filter: blur(1px); */
-}
+
 header a{
   
-  margin: 2ch;
+  margin: 2ch 1ch;
   display: block;
   width: 140px;
   height: 40px;
@@ -170,10 +183,13 @@ h1{
   border: 1px solid #d4d0d0;
   border-radius: 8px;
   text-align: center;
-  transition: transform 0.5s ease-in-out, visibility 1s ease-in-out;
+  transition: left 0.5s ease-in-out, visibility 1s ease-in-out;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.377);
   visibility: hidden;
-  transform: translateX(-1000px);
+  display: none;
+  position: relative;
+  left: -1000px;
+  /* transform: translateX(-1000px); */
 }
 .skill-badge-right {
   width: calc(33.3333% - 10px);
@@ -182,16 +198,23 @@ h1{
   border: 1px solid #d4d0d0;
   border-radius: 8px;
   text-align: center;
-  transition: transform 0.5s ease-in-out, visibility 1s ease-in-out;
+  /* transition: transform 0.5s ease-in-out, visibility 1s ease-in-out; */
+  transition: left 0.5s ease-in-out,display 1s, visibility 1s ease-in-out;
+  /* display: none; */
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.377);
   visibility: hidden;
-  transform: translateX(1000px);
+  position: relative;
+  left: 1000px;
+  /* transform: translateX(1000px); */
 }
 
 .active-skill{
   
-  transform: translateX(0px);
+  /* display: flex; */
+  /* transform: translateX(0px); */
+  left: 0px;
   visibility: visible;
+  /* right: 0px; */
 }
 /* .active-skill:nth-child(even){
   
@@ -330,16 +353,17 @@ li:hover {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .courses-li {
-  width: 49%;
+  width: 380px;
   min-height: 200px;
   border-radius: 18px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.377);
   padding: 20px;
   box-sizing: border-box;
   color: #555;
+  margin: 1ch;
 }
 .courses-li a{
  
@@ -414,3 +438,69 @@ footer h1{
   height: 20%;
 }
 
+@media screen and (max-width: 600px) {
+  #profile_pic{
+    right: calc(50% - 80px);
+    height: 150px;
+    width: 150px;
+    border-width: 5px;
+    border-radius : 50% ;
+  }
+  #myName{
+    font-size: .8rem;
+    line-height: 80px;
+  }
+  #blur_box{
+    height: 80px;
+  }
+  header{
+
+    height: 250px;  
+    background-size : 100% 50%;
+  }
+  main{
+    margin-top: 100px;
+  }
+  #about{
+    scroll-margin-top: 300px;
+    font-size: 15px;
+    line-height: 1.5;
+    
+  }
+  .courses-list {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header{
+    justify-content: left;
+
+  }
+  .nav_bar{
+    position : fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background: #141414;
+    display: block;
+    z-index: 2;
+    transition: .5s;
+  }
+  .nav_bar a{
+  
+    text-align: left;
+    margin-left: 15%;
+  }
+  #colnav{
+    display: block;
+  }
+  .active_navbar{
+    left: 0px;
+  }
+  .close_btn{
+    width: 100%;
+    height: 60px;
+    font-size: larger;
+    
+  }
+}
