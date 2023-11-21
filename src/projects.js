@@ -17,6 +17,23 @@ export const projects = [
         des : "This is an application that provides employees with opportunities to give feedback to each other. "
     }
     ,
+    {name : "Recipe App",
+        img : "./images/recipe.png",
+        link : "https://recipe-app-sigma-sage.vercel.app/",
+        des : "The purpose of this app is to provide users with a wide range of recipes, so they can discover new recipes daily."
+    }
+    ,
+    {name : "Todo App",
+        img : "./images/todo.png",
+        link : "https://todo-ebon-phi.vercel.app",
+        des : "An app designed to help people achieve their day-to-day tasks by allowing them to schedule their daily tasks. "
+    }
+    ,
+    {name : "Calculator",
+        img : "./images/calculator.png",
+        link : "https://calculator-zeta-sepia.vercel.app/",
+        des : "A calculator app that is built with the help of React can perform add, multiply, subtract, and divide operations "
+    },
     {name : "Snake Game",
         img : "./images/snake2.png",
         link : "https://theroughcoder.github.io/snake-game/",
