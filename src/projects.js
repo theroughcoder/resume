@@ -2,7 +2,7 @@ export const projects = [
 
     {name : "FacebookClone",
         img : "./images/fb-profile.png",
-        link : "https://facebook-clone-two-livid.vercel.app/",
+        link : "https://section9.d3r8iuicn1h83t.amplifyapp.com/",
         des : "It's a project that is built with the help of react, express, node and mongobd. This project has used redux for storing the variable globally."
     },
     {name : "Bluesdare",
